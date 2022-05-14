@@ -1,0 +1,506 @@
+
+
+/*COMMON*/
+body{
+    background-image: url("/serv_getWEBP?name=180228_01_White_abstract_background_vector_01.webp");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*zoom: 0.78;*/
+}
+
+button:focus{
+    outline: 0;
+    background-color: lightgrey;
+}
+
+input{
+    margin: 15pt 15pt 15pt 70pt;
+}
+
+label{
+    font-family: Calibri Light, sans-serif;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+div{
+    float: left;
+    margin: 0;
+}
+
+fieldset{
+    margin: 15pt 15pt 15pt 15pt;
+    border: 3px solid red;
+    border-radius: 20px;
+    font-family: Calibri light, sans-serif;
+    font-weight: bold;
+}
+
+legend{
+    font-family: Calibri Light, sans-serif;
+    font-size: 15pt;
+    font-weight: bold;
+    font-style: italic;
+}
+
+span{
+    font-weight: bold;
+    font-family: Calibri light, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-family: Calibri light, sans-serif;
+    font-weight: bold;
+}
+
+th{
+    background: #36304a;
+    font-family: Calibri Light, sans-serif;
+    font-size: 17pt;
+    color: #fff;
+    line-height: 50px;
+    font-weight: bold;
+    width: 33.333%;
+}
+
+h2{
+    display: inline;
+    font-family: Calibri light, sans-serif;
+}
+
+.scrollbar::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: none;
+    opacity: 0.1%;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+
+
+
+
+
+/*Startup, project choice, new project creation*/
+#startup{
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 30px;
+    background-color: white;
+    z-index: 5;
+    display: block;
+    position: absolute;
+    width: 60%;
+    height: 70%;
+    margin: 7% 20% 7% 20%;
+    padding: 0;
+}
+
+#newProjectStartup{
+    margin: 30px 50px 3px 50px;
+    width: 2cm;
+    height: 2cm;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 45pt;
+    border-radius: 20px;
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    color: #5E6565;
+    font-family: Arial, sans-serif;
+}
+
+#newProjectStartup:hover{
+    background-color: darkgray;
+    border-color: darkgray;
+}
+
+.proposition{
+    margin: 30px 50px 3px 50px;
+    width: 2cm;
+    height: 2cm;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 45pt;
+    border-radius: 20px;
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    color: #5E6565;
+    font-family: Calibri Light, sans-serif;
+}
+
+.proposition:hover{
+    background-color: darkgray;
+    border-color: darkgray;
+}
+
+#lastSaved{
+    width: 100%;
+}
+
+#lastSaved td{
+    text-align: center;
+    font-family: Calibri light, sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+#projectContainer{
+    box-sizing: border-box;
+    width: 90%;
+    height: 43%;
+    margin: 15px 5% auto 5%;
+    overflow: auto;
+    border: 1px solid white;
+    border-radius: 40px;
+    padding: 0;
+}
+
+#projectContainer table{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    background-color: whitesmoke;
+}
+
+#projectContainer table tr{
+    height: 40px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+#projectContainer table tr:hover{
+    cursor: pointer;
+    background-color: darkgray;
+}
+
+#projectContainer table tr td{
+    font-family: Calibri light, sans-serif;
+    text-align: center;
+    color: #5E6565;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.label{
+    height: 35px;
+    padding: 0;
+}
+
+.cleanInput{
+    width: 50%;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    height: 35px;
+    margin: 15pt 25% 0 25%;
+    padding: 3px 10px 7px 10px;
+    font-family: Calibri light, sans-serif;
+    font-size: 17pt;
+    font-weight: bold;
+}
+
+.cleanInput:focus{
+    outline: 0;
+}
+
+#company, #clientLastName, #clientName, #projectName{
+    width: 80%;
+    background-color: lightgrey;
+    margin: 2% 7.7% 2% 7.7%;
+}
+
+.projectNameProposition{
+    width: 40%;
+}
+
+.nameProposition{
+    width: 30%;
+}
+.companyProposition{
+    width: 30%;
+}
+
+#cancelProject{
+    background-color: #F6968E;
+    color: #7C1D16;
+    margin-right: 7.7%;
+    width: 30%;
+    border: 1px solid #F6968E;
+}
+
+#cancelProject:hover{
+    border: 3px solid #7C1D16;
+}
+
+#createProject{
+    margin-left: 7.7%;
+    width: 50%;
+    margin-right: 4%;
+    background-color: #95F68E;
+    color: #0E6C07;
+    border: 1px solid #60F054;
+}
+
+#createProject:hover{
+    border: 3px solid #0E6C07;
+}
+
+.startupButton{
+    font-size: 30pt;
+    font-weight: bold;
+    font-family: Calibri light, sans-serif;
+    height: 12%;
+    margin-top: 3%;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+
+
+/*Modules table*/
+#partieEtiquettes{
+    float: right;
+    width: 79%;
+    height: 850px;
+    overflow: auto;
+    text-align: center;
+}
+
+.module{
+    width: calc(1.8cm - 1px);
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 1px 0 1px 0;
+}
+
+.etiquette{
+    height: 3.5cm;
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+#ensembleEtiquettes{
+    width: 32.5cm;
+    border: 1px solid grey;
+    border-collapse: collapse;
+    table-layout: fixed;
+    padding: 0;
+    margin-top: 25pt;
+    margin-right: 95pt;
+    margin-left: auto;
+}
+
+.input{
+    border: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-block: hidden;
+    margin: 0;
+    resize: none;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    font-family: Calibri light, sans-serif;
+    font-size: 9.8pt;
+}
+
+.inputNumber{
+    border: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-block: hidden;
+    margin: 0;
+    resize: none;
+    text-align: right;
+    vertical-align: middle;
+    color: black;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    font-family: Calibri light, sans-serif;
+    font-size: 8.4pt;
+    padding: 0.005cm 2px 0.005cm 2px;
+}
+
+.fuseCellsCell{
+    border-collapse: collapse;
+    cursor: pointer;
+    padding: 0;
+}
+
+.fuseCellsRow{
+    height: 0.4cm;
+    background-color: beige;
+}
+
+.fuseCellsCell:hover{
+    background-color: grey;
+}
+
+#rowIndex{
+    margin: 0 0 0 5px;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+
+
+
+/*Edit buttons, events messages*/
+.cleanButton{
+    margin: 15pt 15pt 15pt 15pt;
+    width: 3.4cm;
+    height: 1.8cm;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20pt;
+    font-style: italic;
+    border-radius: 16px;
+    background-color: #080840;
+    border: 1px solid #080840;
+    color: white;
+    font-family: Verdana, sans-serif;
+}
+
+.cleanButton:hover{
+    color: lightgrey;
+}
+
+.cleanButton:active{
+    background-color: #080840;
+    border: 1px solid #080840;
+    color: white;
+}
+
+#partieCommande{
+    width: 18%;
+    padding-left: 30pt;
+}
+
+#clientInfo{
+    width: 100%;
+    text-align: center;
+}
+
+#events{
+    font-family: Calibri light, sans-serif;
+    font-weight: bold;
+}
+
+#save{
+    width: calc(6.8cm + 30pt + 2px);
+}
+
+
+
+
+/*Different classes for placeholder inside the head table*/
+/*BLACK*/
+.blackNormal{
+
+}
+
+.blackNormal::placeholder{
+    color: black;
+    font-weight: normal;
+}
+
+.blackBold{
+
+}
+
+.blackBold::placeholder{
+    color: black;
+    font-weight: bold;
+}
+/*RED*/
+.redNormal{
+
+}
+
+.redNormal::placeholder{
+    color: red;
+    font-weight: normal;
+}
+
+.redBold{
+
+}
+
+.redBold::placeholder{
+    color: red;
+    font-weight: bold;
+}
+/*BLUE*/
+.blueNormal{
+
+}
+
+.blueNormal::placeholder{
+    color: blue;
+    font-weight: normal;
+}
+
+.blueBold{
+
+}
+
+.blueBold::placeholder{
+    color: blue;
+    font-weight: bold;
+}
+/*GREEN*/
+.greenNormal{
+
+}
+
+.greenNormal::placeholder{
+    color: green;
+    font-weight: normal;
+}
+
+.greenBold{
+
+}
+
+.greenBold::placeholder{
+    color: green;
+    font-weight: bold;
+}

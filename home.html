@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Antoons Luc BV - Étiquettes</title>
+        <script src="/serv_getJS?name=programme_etiquettes.js"></script>
+        <link type="text/css" rel="stylesheet" href="/serv_getCSS?name=programme_etiquettes.css">
+        <link rel=stylesheet media=print href="/serv_getCSS?name=impression.css">
+        <link rel="icon" href="/serv_getPNG?name=letter-a-design-png-1.png">
+    </head>
+    <body>
+        <div id="startup">
+            <table id="lastSaved">
+                <tr>
+                    <td><button id="newProjectStartup" onclick="newProject()">+</button><br></td><td><button class="proposition" onclick="">P</button><br></td><td><button class="proposition" onclick="">P</button><br></td><td><button class="proposition" onclick="">P</button><br></td><td><button class="proposition" onclick="">P</button><br></td><td><button class="proposition" onclick="">P</button><br></td>
+                </tr>
+                <tr class="label">
+                    <td>Nouveau<br>Projet</td><td class="propositionLabel"></td><td class="propositionLabel"></td><td class="propositionLabel"></td><td class="propositionLabel"></td><td class="propositionLabel"></td>
+                </tr>
+                <tr>
+                    <td><button class="proposition" onclick="">P</button><br></td><td><button class="proposition" onclick="">P</button><br></td><td><button class="proposition" onclick="">P</button><br></td><td><button class="proposition" onclick="">P</button><br></td><td><button class="proposition" onclick="">P</button><br></td><td><button class="proposition" onclick="">P</button><br></td>
+                </tr>
+                <tr class="label">
+                    <td class="propositionLabel"></td><td class="propositionLabel"></td><td class="propositionLabel"></td><td class="propositionLabel"></td><td class="propositionLabel"></td><td class="propositionLabel"></td>
+                </tr>
+            </table>
+            <label><input class="cleanInput" id="searchProject" type="text" oninput="searchProject(this.value)" placeholder="Rechercher..."></label>
+            <div id="projectContainer">
+                <table id="Projects" class="scrollbar">
+
+                </table>
+            </div>
+        </div>
+        <div id="partieEtiquettes" class="scrollbar">
+            <h1 id="projectTitle"></h1>
+            <table id="ensembleEtiquettes">
+                <tbody id="etiquettes">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div id="partieCommande">
+            <div id="clientInfo"></div>
+            <button id="addRow" class="cleanButton" onclick="showTickets()">ADD</button>
+            <button id="deleteRow" class="cleanButton" onclick="deleteRow()">DEL</button>
+            <br>
+            <fieldset>
+                <legend>Couleur</legend>
+                <label for="black">
+                    <input type="radio" id="black" name="color" value="black" onclick="changeColor(this.value)">Black
+                </label><br>
+                <label for="red">
+                    <input type="radio" id="red" name="color" value="red" onclick="changeColor(this.value)" checked>Red
+                </label><br>
+                <label for="blue">
+                    <input type="radio" id="blue" name="color" value="blue" onclick="changeColor(this.value)">Blue
+                </label><br>
+                <label for="green">
+                    <input type="radio" id="green" name="color" value="green" onclick="changeColor(this.value)">Green
+                </label>
+            </fieldset>
+            <button id="newProject" class="cleanButton" onclick="window.open('./home.html', '_blank');">NEW</button>
+            <button id="impression" class="cleanButton" onclick="printWindow()">PRINT</button>
+            <br>
+            <button id="save" class="cleanButton" onclick="saveProject()">SAVE</button>
+            <br>
+            <fieldset id="projectStatus">
+                <legend>Project Status</legend>
+                Save status : <span id="saveStatus"></span>
+                <br><br>
+                Number of lines : <span id="nOfLines"></span>
+                <br><br>
+                Recent events : <p id="events"></p>
+            </fieldset>
+        </div>
+    </body>
+</html>

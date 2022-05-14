@@ -1,0 +1,40 @@
+/*body{
+    zoom: 1;
+}*/
+button{
+    display: none;
+}
+
+input{
+    display: none;
+}
+
+label{
+    display: none;
+}
+
+#ensembleEtiquettes{
+    margin-top: 0;
+}
+
+fieldset{
+    display: none;
+    margin: 0;
+}
+
+#partieEtiquettes{
+    width: 100%;
+}
+
+table { page-break-inside:auto }
+tr    { page-break-inside:avoid; page-break-after:auto }
+thead { display:table-header-group }
+tfoot { display:table-footer-group }
+
+#partieEtiquettes{
+    overflow: visible;
+}
+
+#clientInfo{
+    display: none;
+}
